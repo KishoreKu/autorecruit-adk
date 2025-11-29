@@ -1,0 +1,2 @@
+candidate_id,name,title,primary_skills,secondary_skills,years_experience,location,visa_status,preferred_employment,current_company,notice_period_days
+C001,Example Candidate,Data Engineer,"Python,SQL","AWS",5,"New York, NY","US Citizen","Full-time","Example Corp",14

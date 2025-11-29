@@ -1,0 +1,17 @@
+[project]
+name = "autorecruit-adk"
+version = "0.1.0"
+description = "AutoRecruit ADK – Multi-Agent Recruiting Copilot"
+authors = [{ name = "YOUR_NAME_HERE", email = "YOUR_EMAIL@example.com" }]
+requires-python = ">=3.9"
+dependencies = [
+    "google-adk",
+    "pandas",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "jupyter"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
