@@ -1,9 +1,14 @@
 import pandas as pd
+import os
 
-def search_candidates(job_profile: dict, top_k: int = 5, path: str = "data/processed/candidates.csv"):
+def search_candidates(job_profile: dict, top_k: int = 5, path: str = None):
     """
     Simple candidate search tool based on skill overlap, experience, and location.
     """
+    if path is None:
+        # Use absolute path based on project structure
+        path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))), "data", "processed", "candidates.csv")
+    
     candidates_df = pd.read_csv(path)
 
     required = set(s.strip().lower() for s in job_profile.get("must_have_skills", []))
